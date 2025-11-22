@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EditKaro.in — Social Media & Video Editing Agency</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">EK</div>
+          <div class="brand-text">
+            <div class="brand-name">EditKaro.in</div>
+            <div class="brand-sub">Social Media & Video Editing</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 8px">
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+            title="Toggle dark / light"
+          >
+            <span id="themeIcon">🌙</span>
+          </button>
+
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+          >
+            ☰
+          </button>
+        </div>
+
+        <nav class="main-nav" id="mainNav">
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="cta">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="eyebrow">Premium — Video editing and marketing</div>
+          <h1 class="hero-title">
+            We craft short-form & long-form videos that convert — Social ads,
+            edits, grading, documentaries.
+          </h1>
+          <p class="hero-sub">
+            EditKaro specializes in short-form social videos, long-form content,
+            gaming edits, football edits, ecommerce ads, documentaries, color
+            grading and anime edits — fast turnaround, creative storytelling and
+            ad-focused editing.
+          </p>
+
+          <div class="buttons">
+            <a class="btn btn-primary" id="startProjectBtn">Start a Project</a>
+            <a class="btn btn-ghost" id="watchVideoBtn">Watch Demo</a>
+          </div>
+
+          <section class="trust-section trust-section--marquee">
+            <div class="trust-title">Trusted by many creators & brands</div>
+
+            <div class="marquee" aria-hidden="true" role="presentation">
+              <div class="marquee-track">
+                <img src="Logo1 (2).png" alt="brand 1" />
+                <img src="logo2.png" alt="brand 2" />
+                <img src="logo3.png" alt="brand 3" />
+                <img src="logo4.png" alt="brand 4" />
+                <img src="logo5.png" alt="brand 1" />
+                <img src="logo6.png" alt="brand 2" />
+                <img src="logo3.png" alt="brand 3" />
+                <img src="logo1.png" alt="brand 4" />
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-img" aria-hidden="true">
+            <img
+              id="heroImg"
+              src="imp2.png"
+              data-light-src="imp2.png"
+              data-dark-src="imp.png"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-head">
+          <h2>Our Work</h2>
+          <div class="subtitle">Select a category to filter</div>
+        </div>
+
+        <div class="work-mobile-wrapper" aria-hidden="false">
+          <div class="work-header-mobile">
+            <div class="work-title">Our Work</div>
+            <button
+              id="categoryToggle"
+              class="category-toggle"
+              aria-expanded="false"
+              aria-controls="mobileCategories"
+            >
+              Select Category ▾
+            </button>
+          </div>
+
+          <div
+            id="mobileCategories"
+            class="mobile-category-panel"
+            aria-hidden="true"
+          >
+            <div class="category-chips" role="list">
+              <button class="chip active" data-filter="all" role="listitem">
+                All
+              </button>
+              <button class="chip" data-filter="short" role="listitem">
+                Short-form
+              </button>
+              <button class="chip" data-filter="long" role="listitem">
+                Long-form
+              </button>
+              <button class="chip" data-filter="gaming" role="listitem">
+                Gaming
+              </button>
+              <button class="chip" data-filter="football" role="listitem">
+                Football
+              </button>
+              <button class="chip" data-filter="ecom" role="listitem">
+                eCommerce Ads
+              </button>
+              <button class="chip" data-filter="doc" role="listitem">
+                Documentary
+              </button>
+              <button class="chip" data-filter="grading" role="listitem">
+                Color Grading
+              </button>
+              <button class="chip" data-filter="anime" role="listitem">
+                Anime Edits
+              </button>
+              <button class="chip" data-filter="ads" role="listitem">
+                Ads
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="short">Short-form</button>
+          <button class="filter-btn" data-filter="long">Long-form</button>
+          <button class="filter-btn" data-filter="gaming">Gaming</button>
+          <button class="filter-btn" data-filter="football">Football</button>
+          <button class="filter-btn" data-filter="ecom">eCommerce Ads</button>
+          <button class="filter-btn" data-filter="doc">Documentary</button>
+          <button class="filter-btn" data-filter="grading">
+            Color Grading
+          </button>
+          <button class="filter-btn" data-filter="anime">Anime Edits</button>
+          <button class="filter-btn" data-filter="ads">Ads</button>
+        </div>
+
+        <div class="grid" id="gallery" aria-live="polite">
+          <article class="card fade-in" data-category="short ads">
+            <div class="card-media">
+              <img src="1.jpg" alt="Short-form sample" />
+            </div>
+            <div class="card-body">
+              <div class="tag">Short-form • Social</div>
+              <div class="title">15s Ecommerce Ad — Flash Sale</div>
+              <div class="meta">Service: eCommerce Ads • 2025</div>
+            </div>
+          </article>
+
+          <article class="card fade-in" data-category="long doc">
+            <div class="card-media">
+              <img src="football2.png" alt="Documentary sample" />
+            </div>
+            <div class="card-body">
+              <div class="tag">Documentary</div>
+              <div class="title">Mini-Doc — Local Football Club</div>
+              <div class="meta">Service: Documentary • 12m</div>
+            </div>
+          </article>
+
+          <article class="card fade-in" data-category="gaming short">
+            <div class="card-media">
+              <img src="gamemontage.png" alt="Gaming sample" />
+            </div>
+            <div class="card-body">
+              <div class="tag">Gaming</div>
+              <div class="title">Gaming Montage — Highlight Reels</div>
+              <div class="meta">Service: Gaming Edits • 2024</div>
+            </div>
+          </article>
+
+          <article class="card fade-in" data-category="football ads">
+            <div class="card-media">
+              <img src="footballmtch.png" alt="Football edit" />
+            </div>
+            <div class="card-body">
+              <div class="tag">Football Edit</div>
+              <div class="title">Match Highlights • Action Cut</div>
+              <div class="meta">Service: Football Edits • 3m</div>
+            </div>
+          </article>
+
+          <article class="card fade-in" data-category="ecom grading">
+            <div class="card-media"><img src="img2.webp" alt="Ecom ad" /></div>
+            <div class="card-body">
+              <div class="tag">eCommerce</div>
+              <div class="title">Product Ad — Lifestyle Edit</div>
+              <div class="meta">Service: eCom Ads • 30s</div>
+            </div>
+          </article>
+
+          <article class="card fade-in" data-category="anime grading">
+            <div class="card-media">
+              <img src="anime.png" alt="Anime edit" />
+            </div>
+            <div class="card-body">
+              <div class="tag">Anime</div>
+              <div class="title">Anime Style Promo — Color Grade</div>
+              <div class="meta">Service: Anime Edits • 45s</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-band">
+          <div>
+            <div class="cta-title">Want a custom video that converts?</div>
+            <div class="cta-sub">
+              Tell us your goal and we'll deliver a sample cut in 48 hours.
+            </div>
+          </div>
+          <div>
+            <a class="btn btn-primary" id="contactBtn">Get a Quote</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="about-left">
+          <h3>About EditKaro</h3>
+          <p class="muted">
+            We are a creative studio focused on storytelling for social. Our
+            team includes editors, motion designers and colorists who’ve worked
+            across ecommerce brands, creators, gaming channels and sports
+            publishers.
+          </p>
+          <ul class="muted">
+            <li>Quick turnarounds — 24–72 hours for short-form</li>
+            <li>Ad creative optimized for CTR & conversions</li>
+            <li>Color grading & LUT design for consistent brand look</li>
+          </ul>
+        </div>
+        <div class="about-right">
+          <img src="edit.png" alt="team" />
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="contact-left">
+          <h3>Start your project</h3>
+          <p class="muted">
+            Share your brief and preferred platform (Instagram, YouTube, Twitch,
+            eCom). We'll reply with pricing and a sample timeline.
+          </p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input name="name" placeholder="Your name" required />
+          <input name="email" placeholder="Email" required />
+          <select name="service" aria-label="service">
+            <option value="">Choose service</option>
+            <option>Short-form video</option>
+            <option>Long-form content</option>
+            <option>Color grading</option>
+            <option>Ads</option>
+          </select>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <div class="modal-head">
+          <div class="modal-title">Project Preview</div>
+          <button
+            id="modalClose"
+            class="modal-close"
+            aria-label="Close preview"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modal-video" id="modalVideo">
+          <img id="modalImg" src="" alt="preview" />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-title">EditKaro.in</div>
+          <div class="muted">Social Media Marketing & Video Editing</div>
+        </div>
+        <div style="text-align: right" class="muted">
+          <div>© EditKaro 2025</div>
+          <div style="margin-top: 6px">Email: hello@editkaro.in</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
